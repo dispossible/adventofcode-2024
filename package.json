@@ -1,0 +1,15 @@
+{
+    "name": "adventofcode-2024",
+    "version": "1.0.0",
+    "scripts": {
+        "1": "npx tsx 01/index.ts"
+    },
+    "author": "Dispossible",
+    "description": "",
+    "dependencies": {
+        "@types/node": "^22.10.1",
+        "eslint": "^9.16.0",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2"
+    }
+}
