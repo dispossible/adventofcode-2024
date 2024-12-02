@@ -2,7 +2,8 @@
     "name": "adventofcode-2024",
     "version": "1.0.0",
     "scripts": {
-        "1": "npx tsx 01/index.ts"
+        "1": "npx tsx 01/index.ts",
+        "2": "npx tsx 02/index.ts"
     },
     "author": "Dispossible",
     "description": "",
