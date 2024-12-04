@@ -1,4 +1,4 @@
-import { readFile, parseNumberList, readEntireFile } from "../utils/file";
+import { readEntireFile } from "../utils/file";
 
 (async () => {
     console.log(await dayThree("./03/test.txt")); // 161
