@@ -1,13 +1,13 @@
 import * as fs from "fs/promises";
 
 export async function readEntireFile(fileName: string) {
-    return await fs.readFile(fileName, { encoding: "utf-8" });
+    const file = await fs.readFile(fileName, { encoding: "utf-8" });
+    return file.trim().replaceAll("\r\n", "\n");
 }
 
 export async function readFile(fileName: string, separator = "\n") {
     const input = await readEntireFile(fileName);
     return input
-        .replaceAll("\r\n", "\n")
         .split(separator)
         .map((s) => s.trim())
         .filter((s) => !!s);

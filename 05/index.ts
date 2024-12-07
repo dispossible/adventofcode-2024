@@ -10,7 +10,7 @@ import { readEntireFile } from "../utils/file";
 async function partOne(path: string): Promise<number[]> {
     const input = await readEntireFile(path);
 
-    const [rules, updateSets] = input.split("\r\n\r\n");
+    const [rules, updateSets] = input.split("\n\n");
 
     const rulePairs = parseRules(rules);
     const updateRows = updateSets.split("\n");
