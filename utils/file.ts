@@ -1,16 +1,19 @@
 import * as fs from "fs/promises";
 
-export async function readEntireFile(fileName: string) {
+export async function readEntireFile(fileName: string): Promise<string> {
     const file = await fs.readFile(fileName, { encoding: "utf-8" });
     return file.trim().replaceAll("\r\n", "\n");
 }
 
-export async function readFile(fileName: string, separator = "\n") {
+export async function readFile(fileName: string, separator = "\n"): Promise<string[]> {
     const input = await readEntireFile(fileName);
-    return input
-        .split(separator)
-        .map((s) => s.trim())
-        .filter((s) => !!s);
+    return input.split(separator).reduce((lines, line) => {
+        const lineT = line.trim();
+        if (lineT) {
+            lines.push(line);
+        }
+        return lines;
+    }, []);
 }
 
 export async function readJsonFile<T>(fileName: string, fallback?: T): Promise<T> {
