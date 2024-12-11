@@ -9,7 +9,8 @@
         "5": "npx tsx 05/index.ts",
         "6": "npx tsx 06/index.ts",
         "7": "npx tsx 07/index.ts",
-        "8": "npx tsx 08/index.ts"
+        "8": "npx tsx 08/index.ts",
+        "9": "npx tsx 09/index.ts"
     },
     "author": "Dispossible",
     "description": "",
