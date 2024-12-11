@@ -10,7 +10,7 @@ export async function readFile(fileName: string, separator = "\n"): Promise<stri
     return input.split(separator).reduce((lines, line) => {
         const lineT = line.trim();
         if (lineT) {
-            lines.push(line);
+            lines.push(lineT);
         }
         return lines;
     }, []);
